@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html ng-app="SearchApp">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,maximum-scale=1" />
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>わんこサーチ</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/common.css" rel="stylesheet">
+    <link href="css/utility.css" rel="stylesheet">
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <!-- header -->
+    <div class="header" id="header">
+      <div>
+        
+      </div>  
+    </div>
+    <!-- header -->
+    <!-- container -->
+    <div class="container">
+      <div ng-controller="SearchController">
+          <input type="text" ng-model="keyword" placeholder="Keyword" class="dog_search_form"/>
+
+          <p class="hit_number">
+              検索ヒット数 : <span class="searchResultCount hit">{{(users | andSearchFilter:keyword).length}}</span>
+              件 / <span class="searchResultCount">{{users.length}}</span> 件中
+          </p>
+
+          <ul class="dog_list u-cf">
+            <li class="data-table u-fl col-xs-6 col-sm-4 col-lg-2" ng-repeat="user in users | andSearchFilter:keyword">
+              <div class="dog_link">
+                <p class="dog_name">{{user.name}}</p>
+                <p class="dog_thum"><img src="images/{{user.src}}" ng-src="images/{{user.src}}" title="" ng-show="{{user.visible}}" class="" /></p>
+                <p class="u-disn">{{user.kana}}</p>
+                <p>{{user.note}}</p>
+                <a class="btn btn-warning bt_detail" href="#/{{user.id}}" >詳細</a>
+              </div>
+            </li>
+          </ul>
+
+
+          <!-- <table class="data-table">
+              <thead>
+              <tr>
+                  <th>ID</th>
+                  <th>氏名</th>
+                  <th>フリガナ</th>
+                  <th>備考</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr ng-repeat="user in users | andSearchFilter:keyword">
+                  <td>{{user.id}}</td>
+                  <td><img src="images/{{user.src}}" ng-src="images/{{user.src}}" title="" ng-show="{{user.visible}}" /></td>
+                  <td>{{user.name}}</td>
+                  <td>{{user.kana}}</td>
+                  <td>{{user.note}}</td>
+              </tr>
+              </tbody>
+          </table> -->
+      </div>
+
+    </div>
+    <!-- container -->
+    <!-- footer -->
+    <div class="footer">
+      <p class="copy">Copyright© 2015 Dole Japan, Inc.All Rights Reserved.</p>
+    </div>
+    <!-- footer -->
+
+    <script type="text/javascript" src="lib/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="lib/angularjs/angular.js"></script>
+
+    <script type="text/javascript" src="js/service/service.js"></script>
+    <script type="text/javascript" src="js/filter/andSearchFilter.js"></script>
+    <script type="text/javascript" src="js/controller/controller.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
