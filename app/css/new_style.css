@@ -1,0 +1,267 @@
+@charset "UTF-8";
+/*-------------------------------------
+  Style
+-------------------------------------*/
+
+html,body{
+    height: 100%;
+}
+
+body {
+	background: #efefef;
+}
+
+a{
+	color: #000;
+}
+
+p {
+	margin: 0;
+}
+
+h1,h2,h3 {
+	margin: 0;
+	padding: 0;
+}
+
+.container{
+    position: relative;
+    height: auto !important;
+    height: 100%;
+}
+
+.header {
+	width: 100%;
+	height: auto;
+	background-color: #ffc925;
+	border-bottom: 10px solid #d7aa22;
+	margin: 0;
+	border-radius: 0;
+	position: fixed;
+	top: 0;
+	z-index: 100;
+}
+
+.dropdown-menu {
+	background-color: #fff;
+}
+
+.hit_number {
+	padding-top: 5px;
+	text-align: right;
+}
+
+.dog_name {
+	text-align: center;
+}
+
+.dog_link {
+	background-color: #fff;
+	border: 1px solid #eee;
+	padding: 5px;
+	border-radius: 5px;
+}
+
+.dog_thum img {
+	width: 100%;
+}
+
+.dog_search_form {
+	width: 100%;
+	height: 50px;
+	padding-left: 10px;
+	border-radius: 5px;
+	border: 1px solid #ffc925;
+}
+
+.bt_detail {
+	width: 100%;
+}
+
+.footer {
+	width: 100%;
+	background-color: #ffc925;
+	position: relative;
+    bottom: 0;
+}
+
+.copy {
+	color: #fff;
+	text-align: center;
+	padding: 10px 0;
+	margin: 0;
+}
+
+
+
+
+/*20150622*/
+
+.top_item {
+	width: 100%;
+	height: 200px;
+	overflow: hidden;
+	background-color: #000;
+	position: relative;
+}
+
+.top_item_txt {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 70px;
+	background-color: #000;
+	opacity: 0.7;
+	color: #fff;
+	padding: 10px 10px 0 10px;
+}
+
+.news_wrap {
+	background-color: #fff;
+	margin-bottom: 10px;
+	display: block;
+}
+
+.post_thum {
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+
+.post_excerpt {
+	margin: 0;
+	padding: 5px 0 0 10px;
+	word-wrap: break-word;
+	font-size: 20px;
+}
+
+.main_ttl {
+	width: 100%;
+	height: 50px;
+	background-color: #ffc925;
+	margin: 0 0 10px 0;
+	color: #fff;
+	text-align: center;
+	line-height: 50px;
+	font-size: 18px;
+
+}
+
+.btn_more {
+	width: 100%;
+	height: 50px;
+}
+.btn_more a {
+	color: #fff;
+	text-decoration: none;
+}
+
+/*menu css*/
+.navigation {
+    list-style: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 60px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+}
+
+li.nav-item {
+  padding: 10px 0 10px 10px;
+  border-bottom: 1px solid #999;
+}
+
+.site-wrap {
+    min-width: 100%;
+    min-height: 100%;
+    background-color: #fff;
+    position: relative;
+    top: 60px;
+    bottom: 100%;
+    left: 0;
+    z-index: 1;
+}
+.nav-trigger {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+}
+
+label[for="nav-trigger"] {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 101;
+}
+
+label[for="nav-trigger"] {
+    /* ... previous styles here... */
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' x='0px' y='0px' width='30px' height='30px' viewBox='0 0 30 30' enable-background='new 0 0 30 30' xml:space='preserve'><rect width='30' height='6'/><rect y='24' width='30' height='6'/><rect y='12' width='30' height='6'/></svg>");
+    background-size: contain;
+}
+
+.nav-trigger:checked + label {
+    left: 215px;
+}
+ 
+.nav-trigger:checked ~ .site-wrap {
+    left: 200px;
+}
+
+.nav-trigger + label, .site-wrap {
+    transition: left 0.2s;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/*===============================================
+●smart.css  画面の横幅が640pxまで
+===============================================*/
+@media screen and (max-width:640px){
+.container{
+width:100%;
+margin: 0 0 10px 0;
+}
+	.dog_list li:nth-child(n) {
+		margin-bottom: 20px;
+	}
+
+	.header {
+		height: 60px;
+	}
+}
+
+/*===============================================
+●tablet.css 画面の横幅が768pxまで
+===============================================*/
+@media screen and (max-width: 768px){
+#container{
+width:100%;
+}
+	.dog_list li:nth-child(n) {
+		margin-bottom: 20px;
+	}
+
+	/* デスクトップ表示ではホバー操作でドロップダウンを表示 */
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+}
+/*===============================================
+●style.css 画面の横幅が769px以上
+===============================================*/
+@media screen and (min-width: 769px){
+#container{
+width:100%;
+}
+	.dog_list li:nth-child(n) {
+		margin-bottom: 20px;
+	}
+}
