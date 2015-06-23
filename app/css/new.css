@@ -23,24 +23,191 @@ h1,h2,h3 {
 	margin: 0;
 }
 
+/*----go top ---------*/
+
+.pagetop {
+	width: 40px;
+	height: 40px;
+	background-color: rgba(51,51,51,0.8);
+	border-radius: 20px;
+	display: block;
+	text-align: center;
+	line-height: 40px;
+	position: fixed;
+	bottom: 90px;
+	right: 20px;
+	z-index: 102;
+}
+
+#back-top a {
+	color: #fff;
+	text-decoration: none;
+}
+
 
 /*===============================================
 ●style.css 画面の横幅が769px以上
 ===============================================*/
 @media screen and (min-width: 769px){
+body {
+	background: #fff;
+	height: 100%;
+}
 .container{
 	width: 960px;
+	margin: 0 auto;
+	padding: 0;
+}
+
+.col-xs-4 {
+	padding: 0;
 }
 
 .header {
 	width: 100%;
 	height: 70px;
 	background-color: #ffc925;
-	border-bottom: 5px solid #d7aa22; 
+	border-bottom: 5px solid #d7aa22;
+	margin-bottom: 20px;
+}
+
+.main_ttl {
+	width: 100%;
+	height: 30px;
+	background-color: #ffc925;
+	padding-left: 10px;
+	color: #fff;
+	text-align: center;
+	line-height: 30px;
+	font-size: 18px;
+}
+
+.main_top_wrap {
+	width: 960px;
+	margin: 0 auto 30px;
+}
+
+.top-wrap-text {
+	width: 100%;
+	padding: 10px;
+	font-size: 20px;
+	color: #fff;
+	position: absolute;
+	bottom: 0;
+	z-index: 101;
+	background-color: rgba(51,51,51,0.8);
+}
+
+.main_top_wrap_img img{
+	position: relative;
+	bottom: 100px;
+	width: 100%;
+}
+
+.top_left_wrap {
+	width: 600px;
+	height: 300px;
+	float: left;
+	position: relative;
+	overflow: hidden;
+}
+
+.top_right_wrap {
+	width: 340px;
+	height: 300px;
+	float: left;
+	margin-left: 20px;
+}
+
+.top_right_wrap ul li {
+	height: 145px;
+	position: relative;
+	overflow: hidden;
+}
+
+.top_right_wrap ul li:nth-child(1) {
+	margin-bottom: 10px;
+}
+
+.main-wrap {
+	width: 600px;
+	float: left;
+}
+
+.news_wrap {
+	margin-bottom: 30px;
+}
+
+.news_wrap ul li {
+	border: 1px solid #666;
+	margin-bottom: 10px;
+	background-color: #fff;
+}
+
+.post_title {
+	padding: 10px;
+	float: left;
+	width: 498px;
+}
+
+.post_img {
+	width: 100px;
+	height: 100px;
+	float: left;
+}
+
+.bt_more {
+	display: block;
+	width: 200px;
+	height: 50px;
+	margin: 0 auto;
+	line-height: 40px;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+/*side_wrap*/
+.side-wrap {
+	width: 340px;
+	margin-left: 20px;
+	float: left;
+}
+
+.side-wrap div {
+	margin-bottom: 10px;
+}
+
+.famouse_wrap ul li {
+	padding: 5px 0;
+	border-bottom: 1px dotted #eee;
+}
+
+.famouse_title {
+	width: 280px;
+	padding: 5px 0 0 5px;
+	text-decoration: none;
+	font-size: 16px;
+	float: left;
+}
+
+.famouse_img {
+	width: 60px;
+	height: 60px;
+	float: left;
+}
+
+.famouse_img img {
+	width: 100%;
+}
+
+.banner_wrap {
+	height: 300px;
+	background-color: #000;
 }
 
 .footer {
 	background-color: #fff;
+	margin-top: 30px;
 }
 
 .footer_link_item {

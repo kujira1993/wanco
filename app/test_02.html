@@ -20,7 +20,7 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body>
+  <body id="body">
     <!-- header -->
     <div class="header">
       
@@ -28,43 +28,74 @@
     <!-- header -->
 
     <!-- container -->
-    <div id="container" class="container">
+    <div id="container" class="container u-cf">
+      
+      <div class="main_top_wrap u-cf" id="wrap">
+        <div class="top_left_wrap">
+          <div class="top-wrap-text">記事のタイトル</div>
+          <p class="main_top_wrap_img"><img src="images/square_100-100.jpg" alt=""></p>
+        </div>
+        <div class="top_right_wrap">
+          <ul>
+            <li>
+              <div class="top-wrap-text">記事のタイトル</div>
+              <p class="main_top_wrap_img"><img src="images/square_100-100.jpg" alt=""></p>
+            </li>
+            <li>
+              <div class="top-wrap-text">記事のタイトル</div>
+              <p class="main_top_wrap_img"><img src="images/square_100-100.jpg" alt=""></p>
+            </li>
+          </ul>
+        </div>
+      </div>
+
       <div class="main-wrap">
-        <h2 class="main_ttl u-mt60">新着の記事</h2>
         <!-- news_wrap -->
         <div class="news_wrap">
           <ul>
             <li class="news_item">
               <a href="" class="u-cf"> 
-                <p class="post_img col-xs-4"><img src="images/square_100-100.jpg" alt=""></p>
-                <h2 class="post_title col-xs-8">記事のタイトル記事のタイトル記事のタイトル</h2>
+                <p class="post_img"><img src="images/square_100-100.jpg" alt=""></p>
+                <h2 class="post_title">記事のタイトル記事のタイトル記事のタイトル</h2>
               </a>
             </li>
-            <li class="news_item">
-              <a href="" class="u-cf"> 
-                <p class="post_img col-xs-4"><img src="images/square_100-100.jpg" alt=""></p>
-                <h2 class="post_title col-xs-8">記事のタイトル記事のタイトル記事のタイトル</h2>
-              </a>
-            </li>
-            <li class="news_item">
-              <a href="" class="u-cf"> 
-                <p class="post_img col-xs-4"><img src="images/square_100-100.jpg" alt=""></p>
-                <h2 class="post_title col-xs-8">記事のタイトル記事のタイトル記事のタイトル</h2>
-              </a>
-            </li>
-
           </ul>
           <a href="#" class="btn btn-warning bt_more"><i class="icon-circle-arrow-right"></i> もっとみる</a>
         </div>
         <!-- news_wrap -->
       </div>
 
-      <div class="slide">
-        
+    <!-- side_wrap -->
+    <div class="side-wrap container">
+        <h2 class="main_ttl">人気の記事</h2>
+        <!-- famouse_wrap -->
+        <div class="famouse_wrap">
+          <ul>
+            <li class="famouse_item">
+              <a href="" class="u-cf"> 
+                <p class="famouse_img"><img src="images/square_100-100.jpg" alt=""></p>
+                <h2 class="famouse_title">記事のタイトル記事のタイトル記事のタイトル</h2>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- famouse_wrap -->
+      <div class="twitter">
+        <a class="twitter-timeline" href="https://twitter.com/kujira1993" data-widget-id="456674020696395776">@kujira1993さんのツイート</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
       </div>
+      <div class="banner_wrap">
+        バナーエリア
+      </div>
+    </div>
+    <!-- side_wrap -->
 
     </div>
     <!-- container -->
+
+    <!-- page-top -->
+    <p id="back-top"><a class="pagetop" href="#body">▲</a></p>
+    <!-- page-top -->
 
     <!-- footer -->
     <div class="footer">
@@ -79,7 +110,12 @@
       <p class="copy">Copyright© 2015 wanco.com All Rights Reserved.</p>
     </div>
     <!-- footer -->
-
+    
+    <!-- js -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/to-top.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
 
   </body>
   
