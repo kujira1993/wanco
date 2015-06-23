@@ -11,6 +11,10 @@ body {
 	height: 100%;
 }
 
+a {
+	color: #000;
+}
+
 p {
 	margin: 0;
 }
@@ -53,6 +57,11 @@ body {
 	background: #fff;
 	height: 100%;
 }
+
+.pc-disn {
+	display: none;
+}
+
 .container{
 	width: 960px;
 	margin: 0 auto;
@@ -154,6 +163,7 @@ body {
 	width: 100px;
 	height: 100px;
 	float: left;
+	padding: 0;
 }
 
 .bt_more {
@@ -191,6 +201,7 @@ body {
 }
 
 .famouse_img {
+	padding: 0;
 	width: 60px;
 	height: 60px;
 	float: left;
@@ -245,8 +256,102 @@ width /***/:auto;　
 	border-bottom: 5px solid #d7aa22; 
 }
 
+.top_right_wrap {
+	display: none;
+}
+
+.main_ttl {
+	width: 100%;
+	height: 30px;
+	background-color: #ffc925;
+	padding-left: 10px;
+	color: #fff;
+	text-align: center;
+	line-height: 30px;
+	font-size: 18px;
+	margin: 20px 0 10px 0;
+}
+
+.top_left_wrap {
+	position: relative;
+}
+
+.main_top_wrap {
+	width: 100%;
+}
+
+.top-wrap-text {
+	width: 100%;
+	padding: 10px;
+	font-size: 20px;
+	color: #fff;
+	position: absolute;
+	bottom: 0;
+	z-index: 101;
+	background-color: rgba(51,51,51,0.8);
+}
+
+.news_wrap ul li {
+	margin-bottom: 10px;
+	background-color: #fff;
+}
+
+.main_top_wrap_img {
+	width: 100%;
+	height: 200px;
+	overflow: hidden;
+}
+
+.main_top_wrap_img img{
+	position: relative;
+	bottom: 200px;
+	width: 100%;
+}
+
+.post_img,
+.famouse_img {
+	padding: 0;
+	float: left;
+}
+
+.post_img img,
+.famouse_img img {
+	width: 100%;
+}
+
+.post_title,
+.famouse_title {
+	font-size: 20px;
+	padding: 10px 10px 0 10px;
+	float: left;
+}
+
+.famouse_item {
+  margin-bottom: 10px;
+  background-color: #fff;
+}
+
+.bt_more {
+	display: block;
+	width: 50%;
+	margin: 0 auto;
+}
+
+.twitter {
+	width: 50%;
+	float: left;
+}
+
+.banner_wrap {
+	width: 50%;
+	height: 300px;
+	background-color: #000;
+	float: left;
+}
+
 .footer {
 	background-color: #fff;
+	margin-top: 30px;
 }
 
 .footer_link_item {
@@ -283,7 +388,19 @@ width /***/:auto;　
 	border-bottom: 5px solid #d7aa22; 
 }
 
+.main_top_wrap_img img {
+  position: relative;
+  bottom: 50px;
+  width: 100%;
+}
+
+.post_title,
+.famouse_title {
+	font-size: 14px;
+}
+
 .footer {
+	margin-top: 30px;
 	background-color: #fff;
 }
 
@@ -293,6 +410,17 @@ width /***/:auto;　
 	text-align: center;
 	padding: 10px 0;
 	border: 1px solid #efefef;
+}
+
+.twitter {
+	text-align: center;
+	width: 100%;
+}
+
+.banner_wrap {
+	width: 100%;
+	height: 300px;
+	background-color: #000;
 }
 
 .copy {
