@@ -1,33 +1,4 @@
-<!DOCTYPE html>
-<html ng-app="SearchApp">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,user-scalable=no,maximum-scale=1" />
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>わんこサーチ | わんこドットコム</title>
-
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/new_style.css" rel="stylesheet">
-    <link href="css/common.css" rel="stylesheet">
-    <link href="css/utility.css" rel="stylesheet">
-
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
-
-  <body>
-    
-    <!-- header -->
-    <div class="header">
-      
-    </div>
-    <!-- header -->
+    <?php get_header(); ?>
 
     <!-- トリガー -->
     <input type="checkbox" id="nav-trigger" class="nav-trigger" />
@@ -57,22 +28,16 @@
       <!-- top wrap -->
       <h2 class="main_ttl">新着の記事</h2>
       <div id="container" class="container">
-        <a href="#" class="news_wrap u-cf">
-          <p class="post_thum col-xs-5"><img src="images/dog_img_01.jpg" alt="" width="100%" /></p>
-          <h3 class="post_excerpt col-xs-7">hogehogehogehoge</h3>
+      <?php $my_posts = get_posts(); ?>
+      <?php foreach($my_posts as $post): setup_postdata($post); ?>
+        <a href="<?php the_permalink(); ?>" class="news_wrap u-cf">
+          <p class="post_thum col-xs-5"><a href="<?php the_permalink(); ?>"　width="100%"><?php the_post_thumbnail('thumbnail'); ?></a>
+          <h3 class="post_excerpt col-xs-7"><?php the_excerpt(); ?></h3>
         </a>
-        <a href="#" class="news_wrap u-cf">
-          <p class="post_thum col-xs-5"><img src="images/dog_img_01.jpg" alt="" width="100%" /></p>
-          <h3 class="post_excerpt col-xs-7">hogehogehogehoge</h3>
-        </a>
-        <a href="#" class="news_wrap u-cf">
-          <p class="post_thum col-xs-5"><img src="images/dog_img_01.jpg" alt="" width="100%" /></p>
-          <h3 class="post_excerpt col-xs-7">hogehogehogehoge</h3>
-        </a>
+      <?php endforeach; ?>
+      <?php wp_reset_postdata(); ?>
         
         <button type="button" class="btn btn-warning btn_more"><a href="">もっとみる</a></button> 
-
-
       </div>
       <!-- container -->
       
@@ -84,14 +49,7 @@
             <p class="post_thum col-xs-5"><img src="images/dog_img_01.jpg" alt="" width="100%" /></p>
             <h3 class="post_excerpt col-xs-7">hogehogehogehoge</h3>
           </a>
-          <a href="#" class="news_wrap u-cf">
-            <p class="post_thum col-xs-5"><img src="images/dog_img_01.jpg" alt="" width="100%" /></p>
-            <h3 class="post_excerpt col-xs-7">hogehogehogehoge</h3>
-          </a>
-          <a href="#" class="news_wrap u-cf">
-            <p class="post_thum col-xs-5"><img src="images/dog_img_01.jpg" alt="" width="100%" /></p>
-            <h3 class="post_excerpt col-xs-7">hogehogehogehoge</h3>
-          </a>
+
         </div>
 
         <button type="button" class="btn btn-warning btn_more"><a href="">もっとみる</a></button> 
